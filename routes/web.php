@@ -20,6 +20,10 @@ Route::get('/', function () {
 //Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/infinity', 'InfinityController@index')->name('infinity');
+
+
 //
 //Route::get('/home', function () {
 //    return view('home');

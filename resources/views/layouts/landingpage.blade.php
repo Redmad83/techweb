@@ -64,7 +64,7 @@
 <header>
 
     <div class="header-logo">
-        <a href="index.html">Infinity</a>
+        <a href="{{ route('home') }}">TechWeb</a>
     </div>
 
     <a id="header-menu-trigger" href="#0">
@@ -76,20 +76,18 @@
 
         <a href="#0" class="close-button" title="close"><span>Close</span></a>
 
-        <h3>Infinity.</h3>
+        <h3>TechWeb.</h3>
 
         <ul class="nav-list">
             <li class="current"><a class="smoothscroll" href="#home" title="">Home</a></li>
-            <li><a class="smoothscroll" href="#about" title="">About</a></li>
+            <li><a class="smoothscroll" href="#about2" title="">O Nas</a></li>
             <li><a class="smoothscroll" href="#services" title="">Services</a></li>
             <li><a class="smoothscroll" href="#portfolio" title="">Works</a></li>
             <li><a class="smoothscroll" href="#contact" title="">Contact</a></li>
         </ul>
 
         <p class="sponsor-text">
-            Looking for an awesome and reliable webhosting? Try <a href="http://www.dreamhost.com/r.cgi?287326|STYLESHOUT">DreamHost</a>.
-            Get <span>$50 off</span> when you sign up with the promocode <span>styleshout</span>.
-            <!-- Simply type	the promocode in the box labeled “Promo Code” when placing your order. -->
+
         </p>
 
         <ul class="header-social-list">
@@ -195,7 +193,7 @@
 
         {{--</div>--}}
 
-    {{--</div> <!-- end footer-bottom -->
+    {{--</div> <!-- end footer-bottom -->--}}
 
 </footer>
 
@@ -214,7 +212,7 @@
 
 
 <!--global js starts-->
-<script type="text/javascript" src="{{ asset('assets/js/infinityDown.js') }}"></script>
+{{--<script type="text/javascript" src="{{ asset('assets/js/infinityDown.js') }}"></script>--}}
 <script type="text/javascript" src="{{ asset('assets/js/frontend/lib.js') }}"></script>
 
 <!--global js end-->

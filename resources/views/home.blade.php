@@ -1,7 +1,7 @@
 @extends('layouts/landingpage')
 {{-- Page title --}}
 @section('title')
-    Home
+    TechWeb
     @parent
 @stop
 
@@ -11,22 +11,23 @@
     {{--<link rel="stylesheet" type="text/css" href="{{ asset('assets/infinity/css/base.css') }}">--}}
     {{--<link rel="stylesheet" type="text/css" href="{{ asset('assets/infinity/css/vendor.css') }}">--}}
     {{--<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/frontend/tabbular.css') }}">--}}
+    {{--<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/lib.css') }}">--}}
+    {{--<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/custom.css') }}">--}}
+    {{--<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/infinity.css') }}">--}}
 
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/infinity.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/lib.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/custom.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendors/animate/animate.min.css') }}"/>
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/frontend/tabbular.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendors/animate/animate.min.css') }}"/>
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/frontend/jquery.circliful.css') }}">
 
-    <script type="text/javascript" src="{{ asset('assets/js/infinityUp.js') }}"></script>
+    {{--<link rel="stylesheet" type="text/css" href="{{ asset('assets/vendors/animate/animate.min.css') }}"/>--}}
+    {{--<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/frontend/tabbular.css') }}">--}}
+    {{--<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/frontend/jquery.circliful.css') }}">--}}
+
+    {{--<script type="text/javascript" src="{{ asset('assets/js/infinityUp.js') }}"></script>--}}
 
 
     <style>
         .box{
             margin-top:53px !important;
         }
+
 
     </style>
 
@@ -51,15 +52,15 @@
                 <div class="row">
                     <div class="col-twelve">
 
-                        <h3 class="animate-intro">We Are Infinity.</h3>
+                        <h3 class="animate-intro">Jesteśmy TechWeb.</h3>
                         <h1 class="animate-intro">
-                            We Craft Stunning  <br>
-                            Digital Experiences.
+                            Dzięki nam stworzysz  <br>
+                            swoje techniczne cudo.
                         </h1>
 
                         <div class="more animate-intro">
-                            <a class="smoothscroll button stroke" href="#about">
-                                Learn More
+                            <a class="smoothscroll button stroke" href="#about2">
+                                Dowiedz się więcej
                             </a>
                         </div>
 
@@ -87,7 +88,7 @@
         </ul> <!-- end home-social-list -->
 
         <div class="scrolldown">
-            <a href="#about" class="scroll-icon smoothscroll">
+            <a href="#about2" class="scroll-icon smoothscroll">
                 Scroll Down
                 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
             </a>
@@ -118,27 +119,28 @@
     {{--</section> <!-- end about -->--}}
 
 
-        <div class="container">
+        <div class="container" id="about2">
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-12 col-lg-12 wow zoomIn" data-wow-duration="2s">
-                    <section id="about">
+                    {{--<section id="about">--}}
 
-                    <div class="row about-wrap">
-                    <div class="col-full">
+                    {{--<div class="row about-wrap">--}}
+                    {{--<div class="col-full">--}}
 
-                    <div class="about-profile-bg"></div>
+                    {{--<div class="about-profile-bg"></div>--}}
 
-                    <div class="intro">
-                    <h3 class="animate-this">About Us</h3>
-                    <p class="lead animate-this"><span>Infinity</span> is a creative digital agency based in Manila, Philippines. We are composed of creative designers and experienced developers.</p>
-                    </div>
-
-
-                    </div> <!-- end col-full  -->
-                    </div> <!-- end about-wrap  -->
+                    {{--<div class="intro">--}}
+                        <div class="col-12 text-center my-3">
+                            <h3 class="border-primary"><span class="heading_border bg-primary mx-auto">O Nas</span></h3></div>
+                    <p class="lead animate-this"><span style="color: #0a6aa1">Techweb</span> to kreatywna agencja, która stworzy dla Ciebie Twoją wymarzoną stronę w sieci web i pozwoli zaistnieć Twojej firmie w internecie. Nasza siedziba znajduje się w Polsce lecz tworzymy dla całego świata.</p>
+                    {{--</div>--}}
 
 
-                    </section> <!-- end about -->
+                    {{--</div> <!-- end col-full  -->--}}
+                    {{--</div> <!-- end about-wrap  -->--}}
+
+
+                    {{--</section> <!-- end about -->--}}
                 </div>
                 {{--<div class="col-md-4 col-lg-3 col-sm-4 col-12 wow lightSpeedIn" data-wow-duration="2s">--}}
                     {{--<ul class="list-unstyled  text-right layout-styl">--}}
@@ -161,100 +163,97 @@
                     {{--</ul>--}}
                 {{--</div>--}}
             </div>
+            <div class="row">
+                <!-- Responsive Section Start -->
+                {{--<div class="col-12 text-center my-3">--}}
+                    {{--<h3 class="border-primary"><span class="heading_border bg-primary mx-auto">Our Services</span></h3></div>--}}
+                <div class="col-sm-6 col-md-6 col-lg-3 wow bounceInLeft" data-wow-duration="3.5s">
+                    <div class="box">
+                        <div class="box-icon">
+                            {{--<i class="livicon icon" data-name="desktop" data-size="55" data-loop="true" data-c="#01bc8c"--}}
+                               {{--data-hc="#01bc8c"></i>--}}
+                        </div>
+
+                        <div class="info">
+                            <h3 class="success text-center">Responsive</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti atque, tenetur quam aspernatur
+                                corporis at explicabo nulla dolore necessitatibus doloremque exercitationem sequi dolorem
+                                architecto perferendis quas aperiam debitis dolor soluta!</p>
+                            <div class="text-right primary"><a href="#">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //Responsive Section End -->
+                <!-- Easy to Use Section Start -->
+                <div class="col-sm-6 col-md-6  col-lg-3 col-12 wow bounceInUp" data-wow-duration="3s" data-wow-delay="0.4s">
+                    <!-- Box Start -->
+                    <div class="box">
+                        <div class="box-icon box-icon1">
+                            <i class="livicon icon1" data-name="gears" data-size="55" data-loop="true" data-c="#418bca"
+                               data-hc="#418bca"></i>
+                        </div>
+                        <div class="info">
+                            <h3 class="primary text-center">Easy to Use</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti atque, tenetur quam aspernatur
+                                corporis at explicabo nulla dolore necessitatibus doloremque exercitationem sequi dolorem
+                                architecto perferendis quas aperiam debitis dolor soluta!.</p>
+                            <div class="text-right primary"><a href="#">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //Easy to Use Section End -->
+                <!-- Clean Design Section Start -->
+                <div class="col-sm-6 col-md-6  col-lg-3 col-12 wow bounceInUp" data-wow-duration="3s" data-wow-delay="0.8s">
+                    <div class="box">
+                        <div class="box-icon box-icon2">
+                            <i class="livicon icon1" data-name="doc-portrait" data-size="55" data-loop="true" data-c="#f89a14"
+                               data-hc="#f89a14"></i>
+                        </div>
+                        <div class="info">
+                            <h3 class="warning text-center">Clean Design</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti atque, tenetur quam aspernatur
+                                corporis at explicabo nulla dolore necessitatibus doloremque exercitationem sequi dolorem
+                                architecto perferendis quas aperiam debitis dolor soluta!</p>
+                            <div class="text-right primary"><a href="#">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //Clean Design Section End -->
+                <!-- 20+ Page Section Start -->
+                <div class="col-sm-6 col-md-6 col-lg-3 col-12  wow bounceInRight" data-wow-duration="5s" data-wow-delay="1.2s">
+                    <div class="box">
+                        <div class="box-icon box-icon3">
+                            <i class="livicon icon1" data-name="folder-open" data-size="55" data-loop="true" data-c="#FFD43C"
+                               data-hc="#FFD43C"></i>
+                        </div>
+                        <div class="info">
+                            <h3 class="yellow text-center">20+ Pages</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti atque, tenetur quam aspernatur
+                                corporis at explicabo nulla dolore necessitatibus doloremque exercitationem sequi dolorem
+                                architecto perferendis quas aperiam debitis dolor soluta!</p>
+                            <div class="text-right primary"><a href="#">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //20+ Page Section End -->
+            </div>
         </div>
 
 
-<div class="container">
-        <!-- Service Section Start-->
-        <div class="row">
-            <!-- Responsive Section Start -->
-            <div class="col-12 text-center my-3">
-                <h3 class="border-primary"><span class="heading_border bg-primary mx-auto">Our Services</span></h3></div>
-            <div class="col-sm-6 col-md-6 col-lg-3 wow bounceInLeft" data-wow-duration="3.5s">
-                <div class="box">
-                    <div class="box-icon">
-                        <i class="livicon icon" data-name="desktop" data-size="55" data-loop="true" data-c="#01bc8c"
-                           data-hc="#01bc8c"></i>
-                    </div>
-                    <div class="info">
-                        <h3 class="success text-center">Responsive</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti atque, tenetur quam aspernatur
-                            corporis at explicabo nulla dolore necessitatibus doloremque exercitationem sequi dolorem
-                            architecto perferendis quas aperiam debitis dolor soluta!</p>
-                        <div class="text-right primary"><a href="#">Read more</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- //Responsive Section End -->
-            <!-- Easy to Use Section Start -->
-            <div class="col-sm-6 col-md-6  col-lg-3 col-12 wow bounceInUp" data-wow-duration="3s" data-wow-delay="0.4s">
-                <!-- Box Start -->
-                <div class="box">
-                    <div class="box-icon box-icon1">
-                        <i class="livicon icon1" data-name="gears" data-size="55" data-loop="true" data-c="#418bca"
-                           data-hc="#418bca"></i>
-                    </div>
-                    <div class="info">
-                        <h3 class="primary text-center">Easy to Use</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti atque, tenetur quam aspernatur
-                            corporis at explicabo nulla dolore necessitatibus doloremque exercitationem sequi dolorem
-                            architecto perferendis quas aperiam debitis dolor soluta!.</p>
-                        <div class="text-right primary"><a href="#">Read more</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- //Easy to Use Section End -->
-            <!-- Clean Design Section Start -->
-            <div class="col-sm-6 col-md-6  col-lg-3 col-12 wow bounceInUp" data-wow-duration="3s" data-wow-delay="0.8s">
-                <div class="box">
-                    <div class="box-icon box-icon2">
-                        <i class="livicon icon1" data-name="doc-portrait" data-size="55" data-loop="true" data-c="#f89a14"
-                           data-hc="#f89a14"></i>
-                    </div>
-                    <div class="info">
-                        <h3 class="warning text-center">Clean Design</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti atque, tenetur quam aspernatur
-                            corporis at explicabo nulla dolore necessitatibus doloremque exercitationem sequi dolorem
-                            architecto perferendis quas aperiam debitis dolor soluta!</p>
-                        <div class="text-right primary"><a href="#">Read more</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- //Clean Design Section End -->
-            <!-- 20+ Page Section Start -->
-            <div class="col-sm-6 col-md-6 col-lg-3 col-12  wow bounceInRight" data-wow-duration="5s" data-wow-delay="1.2s">
-                <div class="box">
-                    <div class="box-icon box-icon3">
-                        <i class="livicon icon1" data-name="folder-open" data-size="55" data-loop="true" data-c="#FFD43C"
-                           data-hc="#FFD43C"></i>
-                    </div>
-                    <div class="info">
-                        <h3 class="yellow text-center">20+ Pages</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti atque, tenetur quam aspernatur
-                            corporis at explicabo nulla dolore necessitatibus doloremque exercitationem sequi dolorem
-                            architecto perferendis quas aperiam debitis dolor soluta!</p>
-                        <div class="text-right primary"><a href="#">Read more</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- //20+ Page Section End -->
-        </div>
-        <!-- //Services Section End -->
-</div>
     <!-- Layout Section Start -->
     <section class="feature-main">
         <div class="container">
             <div class="row">
-                <div class="col-md-8 col-sm-8 col-12 col-lg-9 wow zoomIn" data-wow-duration="2s">
+                <div class="col-md-8 col-sm-8 col-12 col-lg-9 wow bounceInLeft" data-wow-duration="3s">
                     <div class="layout-image">
-                        <img src="{{ asset('assets/images/layout.png') }}" alt="layout" class="img-fluid"/>
+                        <img src="{{ asset('assets/images/layout.jpg') }}" alt="layout" class="img-fluid"/>
                     </div>
                 </div>
-                <div class="col-md-4 col-lg-3 col-sm-4 col-12 wow lightSpeedIn" data-wow-duration="2s">
+                <div class="col-md-4 col-lg-3 col-sm-4 col-12 wow bounceInRight" data-wow-duration="3s">
                     <ul class="list-unstyled  text-right layout-styl">
                         <li>
                             <i class="livicon" data-name="checked-on" data-size="20" data-loop="true" data-c="#01bc8c"
@@ -892,10 +891,10 @@
 @section('footer_scripts')
     <!-- page level js starts-->
 
-    <script type="text/javascript" src="{{ asset('assets/js/frontend/jquery.circliful.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('assets/vendors/wow/js/wow.min.js') }}"></script>
+    {{--<script type="text/javascript" src="{{ asset('assets/js/frontend/jquery.circliful.js') }}"></script>--}}
+    {{--<script type="text/javascript" src="{{ asset('assets/vendors/wow/js/wow.min.js') }}"></script>--}}
     {{--<script type="text/javascript" src="{{ asset('assets/vendors/owl_carousel/js/owl.carousel.min.js') }}"></script>--}}
     {{--<script type="text/javascript" src="{{ asset('assets/js/frontend/carousel.js') }}"></script>--}}
-    <script type="text/javascript" src="{{ asset('assets/js/frontend/index.js') }}"></script>
+    {{--<script type="text/javascript" src="{{ asset('assets/js/frontend/index.js') }}"></script>--}}
     <!--page level js ends-->
 @stop
