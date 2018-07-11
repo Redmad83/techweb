@@ -17,12 +17,12 @@
 
     <!-- CSS
   ================================================== -->
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+    {{--<link rel="stylesheet" href="css/bootstrap.css">--}}
+    {{--<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/lib.css') }}">--}}
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/main.css">
-
+    {{--<link rel="stylesheet" href="css/animate.min.css">--}}
 
     {{--<link rel="stylesheet" type="text/css" href="{{ asset('assets/vendors/animate/animate.min.css') }}"/>--}}
 
@@ -115,7 +115,7 @@
 
     </nav>  <!-- end #menu-nav-wrap -->
     <div class="header-logo">
-        <a href="{{ route('home') }}">TechWeb</a>
+        <a href="{{ route('infinity') }}">TechWeb</a>
     </div>
 </header> <!-- end header -->
 
@@ -137,7 +137,7 @@
                         Digital Experiences.
                     </h1>
 
-                    <div class="more animate-this-fadeInRight">
+                    <div class="more animate-this-rollIn">
                         <a class="smoothscroll button stroke" href="#about">
                             Learn More
                         </a>
@@ -217,12 +217,14 @@
 
 <!-- about
 ================================================== -->
+<!-- services
+================================================== -->
 <section id="services">
 
     <div class="overlay"></div>
     <div class="gradient-overlay"></div>
 
-    <div class="row narrow section-intro with-bottom-sep animated bounceInLeft">
+    <div class="row narrow section-intro with-bottom-sep animate-this">
         <div class="col-full">
 
             <h3>Services</h3>
@@ -237,9 +239,7 @@
 
         <div class="services-list block-1-2 block-tab-full group">
 
-            <div class="bgrid service-item animate-this bounceInLeft">
-
-                {{--<span class="icon"><i class="icon-paint-brush"></i></span>--}}
+            <div class="bgrid service-item animate-this-bounceInLeft">
 
 
                 <div class="service-content">
@@ -253,7 +253,7 @@
 
             </div> <!-- end bgrid -->
 
-            <div class="bgrid service-item animate-this animate-this-bounceInRight">
+            <div class="bgrid service-item animate-this-bounceInRight">
 
                 <span class="icon"><i class="icon-earth"></i></span>
 
@@ -269,12 +269,12 @@
 
     </div> <!-- end services-content -->
 
-    <div class="scrolldown">
-        <a href="#portfolio" class="scroll-icon smoothscroll">
-            Scroll Down
-            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-        </a>
-    </div>
+    {{--<div class="scrolldown">--}}
+        {{--<a href="#portfolio" class="scroll-icon smoothscroll">--}}
+            {{--Scroll Down--}}
+            {{--<i class="fa fa-long-arrow-right" aria-hidden="true"></i>--}}
+        {{--</a>--}}
+    {{--</div>--}}
 
     <div class="row services-content">
 
@@ -312,7 +312,104 @@
 
 </section> <!-- end services -->
 
+<!-- technologies
+================================================== -->
 
+{{--<section id="technologies">--}}
+
+    {{--<div class="overlay"></div>--}}
+    {{--<div class="gradient-overlay"></div>--}}
+
+    {{--<div class="row narrow section-intro with-bottom-sep animate-this">--}}
+        {{--<div class="col-full">--}}
+
+            {{--<h3>Services</h3>--}}
+            {{--<h1>What We Do.</h1>--}}
+
+            {{--<p class="lead">Lorem ipsum Elit ut consequat veniam eu nulla nulla reprehenderit reprehenderit sit velit in cupidatat ex aliquip ut cupidatat Excepteur tempor id irure sed dolore sint sunt voluptate ullamco nulla qui Duis qui culpa voluptate enim ea aute qui veniam in irure et nisi nostrud deserunt est officia minim.</p>--}}
+
+        {{--</div> <!-- end col-full -->--}}
+    {{--</div> <!-- end row -->--}}
+
+    {{--<div class="row services-content">--}}
+
+        {{--<div class="services-list block-1-2 block-tab-full group">--}}
+
+            {{--<div class="bgrid service-item animate-this-bounceInLeft">--}}
+
+
+                {{--<div class="service-content">--}}
+                    {{--<i class="livicon icon" data-name="desktop" data-size="55" data-loop="true" data-c="#ff6600"--}}
+                       {{--data-hc="#ff6600"></i>--}}
+                    {{--<h3 class="h05">Branding</h3>--}}
+
+                    {{--<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.--}}
+                    {{--</p>--}}
+                {{--</div>--}}
+
+            {{--</div> <!-- end bgrid -->--}}
+
+            {{--<div class="bgrid service-item animate-this-bounceInRight">--}}
+
+                {{--<span class="icon"><i class="icon-earth"></i></span>--}}
+
+                {{--<div class="service-content">--}}
+                    {{--<h3 class="h05">Web Design</h3>--}}
+
+                    {{--<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.--}}
+                    {{--</p>--}}
+                {{--</div>--}}
+
+            {{--</div> <!-- end bgrid -->--}}
+        {{--</div> <!-- end services-list -->--}}
+
+    {{--</div> <!-- end services-content -->--}}
+
+    {{--<div class="scrolldown">--}}
+    {{--<a href="#portfolio" class="scroll-icon smoothscroll">--}}
+    {{--Scroll Down--}}
+    {{--<i class="fa fa-long-arrow-right" aria-hidden="true"></i>--}}
+    {{--</a>--}}
+    {{--</div>--}}
+
+    {{--<div class="row services-content">--}}
+
+        {{--<div class="services-list block-1-2 block-tab-full group">--}}
+
+            {{--<div class="bgrid service-item animate-this-bounceInLeft">--}}
+
+                {{--<span class="icon"><i class="icon-lego-block"></i></span>--}}
+
+                {{--<div class="service-content">--}}
+                    {{--<h3 class="h05">Web Development</h3>--}}
+
+                    {{--<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.--}}
+                    {{--</p>--}}
+                {{--</div>--}}
+
+            {{--</div> <!-- end bgrid -->--}}
+
+            {{--<div class="bgrid service-item animate-this-bounceInRight">--}}
+
+                {{--<span class="icon"><i class="icon-megaphone"></i></span>--}}
+
+                {{--<div class="service-content">--}}
+                    {{--<h3 class="h05">Marketing</h3>--}}
+
+                    {{--<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.--}}
+                    {{--</p>--}}
+                {{--</div>--}}
+
+            {{--</div> <!-- end bgrid -->--}}
+
+        {{--</div> <!-- end services-list -->--}}
+
+    {{--</div> <!-- end services-content -->--}}
+
+{{--</section> <!-- end services -->--}}
+
+<!-- technologies
+================================================== -->
 <!-- portfolio
 ================================================== -->
 <section id="portfolio">
@@ -755,6 +852,7 @@
 <script src="js/plugins.js"></script>
 {{--<script type="text/javascript" src="{{ asset('assets/vendors/wow/js/wow.min.js') }}"></script>--}}
 <script src="js/main.js"></script>
+
 
 
 

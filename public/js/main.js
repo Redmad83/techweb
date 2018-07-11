@@ -11,7 +11,7 @@
 		defAnimation   : "fadeInUp",    // default css animation
 		defAnimationFadeInRight   : "fadeInRight",    // default css animation
 		defAnimationFadeInLeft   : "fadeInLeft",    // default css animation
-		defAnimationFadeInUp   : "fadeInUp",    // default css animation
+		defAnimationRollIn   : "rollIn",    // default css animation
 		defAnimationBounceInRight   : "bounceInRight",    // default css animation
 		defAnimationBounceInLeft   : "bounceInLeft",    // default css animation
 		scrollDuration : 800,           // smoothscroll duration
@@ -237,348 +237,212 @@
 
   /* Animations
 	* ------------------------------------------------------- */
-	var ssAnimations = function() {
+    var ssAnimations = function() {
 
         if (!$("html").hasClass('no-cssanimations')) {
 
-            // if (direction === 'down' && !$(this.element).hasClass(' animated'))
 
-                $('.animate-this').waypoint({
-                    handler: function (direction) {
+            $('.animate-this').waypoint({
+                handler: function (direction) {
 
-                        var defAnimationEfx = cfg.defAnimation;
+                    var defAnimationEfx = cfg.defAnimation;
 
-                        if (direction === 'down' && !$(this.element).hasClass('animated')) {
-                            $(this.element).addClass('item-animate');
+                    if (direction === 'down' && !$(this.element).hasClass('animated')) {
+                        $(this.element).addClass('item-animate');
 
-                            setTimeout(function () {
-                                $('body .animate-this.item-animate').each(function (ctr) {
-                                    var el = $(this),
-                                        animationEfx = el.data('animate') || null;
+                        setTimeout(function () {
+                            $('body .animate-this.item-animate').each(function (ctr) {
+                                var el = $(this),
+                                    animationEfx = el.data('animate') || null;
 
-                                    if (!animationEfx) {
-                                        animationEfx = defAnimationEfx;
-                                    }
+                                if (!animationEfx) {
+                                    animationEfx = defAnimationEfx;
+                                }
 
-                                    setTimeout(function () {
-                                        el.addClass(animationEfx + ' animated');
-                                        el.removeClass('item-animate');
-                                    }, ctr * 30);
+                                setTimeout(function () {
+                                    el.addClass(animationEfx + ' animated');
+                                    el.removeClass('item-animate');
+                                }, ctr * 30);
 
-                                });
-                            }, 100);
+                            });
+                        }, 100);
 
-                            // setTimeout(function () {
-                            //     $('body .animate-this-bounceInRight.item-animate').each(function (ctr) {
-                            //         var el = $(this),
-                            //             animationEfx = el.data('animate') || null;
-                            //
-                            //         if (!animationEfx) {
-                            //             animationEfx = cfg.defAnimationBounceInRight;
-                            //         }
-                            //
-                            //         setTimeout(function () {
-                            //             el.addClass(animationEfx + ' animated');
-                            //             el.removeClass('item-animate');
-                            //         }, ctr * 30);
-                            //
-                            //     });
-                            // }, 100);
-                        }
+                    }
 
-                        // trigger once only
-                        this.destroy();
-                    },
-                    offset: '95%'
-                });
+                    // trigger once only
+                    this.destroy();
+                },
+                offset: '95%'
+            });
 
-            // }
-            //     $('.animate-this.animate-this-bounceInRight').waypoint({
-            //         handler: function (direction) {
-            //
-            //             var defAnimationEfx = cfg.defAnimationBounceInRight;
-            //
-            //             if (direction === 'down' && !$(this.element).hasClass('animated')) {
-            //                 $(this.element).addClass('item-animate');
-            //
-            //                 setTimeout(function () {
-            //                     $('body .animate-this.animate-this-bounceInRight.item-animate').each(function (ctr) {
-            //                         var el = $(this),
-            //                             animationEfx = el.data('animate') || null;
-            //
-            //                         if (!animationEfx) {
-            //                             animationEfx = defAnimationEfx;
-            //                         }
-            //
-            //                         setTimeout(function () {
-            //                             el.addClass(animationEfx + ' animated');
-            //                             el.removeClass('item-animate');
-            //                         }, ctr * 30);
-            //
-            //                     });
-            //                 }, 100);
-            //
-            //                 // setTimeout(function () {
-            //                 //     $('body .animate-this-bounceInRight.item-animate').each(function (ctr) {
-            //                 //         var el = $(this),
-            //                 //             animationEfx = el.data('animate') || null;
-            //                 //
-            //                 //         if (!animationEfx) {
-            //                 //             animationEfx = cfg.defAnimationBounceInRight;
-            //                 //         }
-            //                 //
-            //                 //         setTimeout(function () {
-            //                 //             el.addClass(animationEfx + ' animated');
-            //                 //             el.removeClass('item-animate');
-            //                 //         }, ctr * 30);
-            //                 //
-            //                 //     });
-            //                 // }, 100);
-            //             }
-            //
-            //             // trigger once only
-            //             this.destroy();
-            //         },
-            //         offset: '95%'
-            //     });
+            $('.animate-this-fadeInLeft').waypoint({
+                handler: function (direction) {
+
+                    var defAnimationEfx = cfg.defAnimationFadeInLeft;
+
+                    if (direction === 'down' && !$(this.element).hasClass('animated')) {
+                        $(this.element).addClass('item-animate');
+
+                        setTimeout(function () {
+                            $('body .animate-this-fadeInLeft.item-animate').each(function (ctr) {
+                                var el = $(this),
+                                    animationEfx = el.data('animate') || null;
+
+                                if (!animationEfx) {
+                                    animationEfx = defAnimationEfx;
+                                }
+
+                                setTimeout(function () {
+                                    el.addClass(animationEfx + ' animated');
+                                    el.removeClass('item-animate');
+                                }, ctr * 30);
+
+                            });
+                        }, 100);
+
+                    }
+
+                    // trigger once only
+                    this.destroy();
+                },
+                offset: '95%'
+            });
+
+            $('.animate-this-fadeInRight').waypoint({
+                handler: function (direction) {
+
+                    var defAnimationEfx = cfg.defAnimationFadeInRight;
+
+                    if (direction === 'down' && !$(this.element).hasClass('animated')) {
+                        $(this.element).addClass('item-animate');
+
+                        setTimeout(function () {
+                            $('body .animate-this-fadeInRight.item-animate').each(function (ctr) {
+                                var el = $(this),
+                                    animationEfx = el.data('animate') || null;
+
+                                if (!animationEfx) {
+                                    animationEfx = defAnimationEfx;
+                                }
+
+                                setTimeout(function () {
+                                    el.addClass(animationEfx + ' animated');
+                                    el.removeClass('item-animate');
+                                }, ctr * 30);
+
+                            });
+                        }, 100);
+
+                    }
+
+                    // trigger once only
+                    this.destroy();
+                },
+                offset: '95%'
+            });
+
+            $('.animate-this-bounceInLeft').waypoint({
+                handler: function (direction) {
+
+                    var defAnimationEfx = cfg.defAnimationBounceInLeft;
+
+                    if (direction === 'down' && !$(this.element).hasClass('animated')) {
+                        $(this.element).addClass('item-animate');
+
+                        setTimeout(function () {
+                            $('body .animate-this-bounceInLeft.item-animate').each(function (ctr) {
+                                var el = $(this),
+                                    animationEfx = el.data('animate') || null;
+
+                                if (!animationEfx) {
+                                    animationEfx = defAnimationEfx;
+                                }
+
+                                setTimeout(function () {
+                                    el.addClass(animationEfx + ' animated');
+                                    el.removeClass('item-animate');
+                                }, ctr * 30);
+
+                            });
+                        }, 100);
+
+                    }
+
+                    // trigger once only
+                    this.destroy();
+                },
+                offset: '95%'
+            });
+
+            $('.animate-this-bounceInRight').waypoint({
+                handler: function (direction) {
+
+                    var defAnimationEfx = cfg.defAnimationBounceInRight;
+
+                    if (direction === 'down' && !$(this.element).hasClass('animated')) {
+                        $(this.element).addClass('item-animate');
+
+                        setTimeout(function () {
+                            $('body .animate-this-bounceInRight.item-animate').each(function (ctr) {
+                                var el = $(this),
+                                    animationEfx = el.data('animate') || null;
+
+                                if (!animationEfx) {
+                                    animationEfx = defAnimationEfx;
+                                }
+
+                                setTimeout(function () {
+                                    el.addClass(animationEfx + ' animated');
+                                    el.removeClass('item-animate');
+                                }, ctr * 30);
+
+                            });
+                        }, 100);
+
+                    }
+
+                    // trigger once only
+                    this.destroy();
+                },
+                offset: '95%'
+            });
+
+            $('.animate-this-rollIn').waypoint({
+                handler: function (direction) {
+
+                    var defAnimationEfx = cfg.defAnimationRollIn;
+
+                    if (direction === 'down' && !$(this.element).hasClass('animated')) {
+                        $(this.element).addClass('item-animate');
+
+                        setTimeout(function () {
+                            $('body .animate-this-rollIn.item-animate').each(function (ctr) {
+                                var el = $(this),
+                                    animationEfx = el.data('animate') || null;
+
+                                if (!animationEfx) {
+                                    animationEfx = defAnimationEfx;
+                                }
+
+                                setTimeout(function () {
+                                    el.addClass(animationEfx + ' animated');
+                                    el.removeClass('item-animate');
+                                }, ctr * 30);
+
+                            });
+                        }, 100);
+
+                    }
+
+                    // trigger once only
+                    this.destroy();
+                },
+                offset: '95%'
+            });
 
         }
-    }
+    };
 
-
-    //     if (!$("html").hasClass('no-cssanimations')) {
-    //         $('.animate-this-fadeInRight').waypoint({
-    //             handler: function (direction) {
-    //
-    //                 var defAnimationEfx = cfg.defAnimationFadeInRight;
-    //
-    //                 if (direction === 'down' && !$(this.element).hasClass('animated')) {
-    //                     $(this.element).addClass('item-animate');
-    //
-    //                     setTimeout(function () {
-    //                         $('body .animate-this-fadeInRight.item-animate').each(function (ctr) {
-    //                             var el = $(this),
-    //                                 animationEfx = el.data('animate') || null;
-    //
-    //                             if (!animationEfx) {
-    //                                 animationEfx = defAnimationEfx;
-    //                             }
-    //
-    //                             setTimeout(function () {
-    //                                 el.addClass(animationEfx + ' animated');
-    //                                 el.removeClass('item-animate');
-    //                             }, ctr * 300);
-    //
-    //                         });
-    //                     }, 100);
-    //                 }
-    //
-    //                 // trigger once only
-    //                 this.destroy();
-    //             },
-    //             offset: '95%'
-    //         });
-    //
-    //         $('.animate-this-fadeInLeft').waypoint({
-    //             handler: function (direction) {
-    //
-    //                 var defAnimationEfx = cfg.defAnimationFadeInLeft;
-    //
-    //                 if (direction === 'down' && !$(this.element).hasClass('animated')) {
-    //                     $(this.element).addClass('item-animate');
-    //
-    //                     setTimeout(function () {
-    //                         $('body .animate-this-fadeInLeft.item-animate').each(function (ctr) {
-    //                             var el = $(this),
-    //                                 animationEfx = el.data('animate') || null;
-    //
-    //                             if (!animationEfx) {
-    //                                 animationEfx = defAnimationEfx;
-    //                             }
-    //
-    //                             setTimeout(function () {
-    //                                 el.addClass(animationEfx + ' animated');
-    //                                 el.removeClass('item-animate');
-    //                             }, ctr * 300);
-    //
-    //                         });
-    //                     }, 100);
-    //                 }
-    //
-    //                 // trigger once only
-    //                 this.destroy();
-    //             },
-    //             offset: '95%'
-    //         });
-    //     }
-    //         if (!$("html").hasClass('no-cssanimations')) {
-    //         $('.animate-this-fadeInUp').waypoint({
-    //             handler: function(direction) {
-    //
-    //                 var defAnimationEfx = cfg.defAnimationFadeInUp;
-    //
-    //                 if ( direction === 'down' && !$(this.element).hasClass('animated')) {
-    //                     $(this.element).addClass('item-animate');
-    //
-    //                     setTimeout(function() {
-    //                         $('body .animate-this-fadeInUp.item-animate').each(function(ctr) {
-    //                             var el       = $(this),
-    //                                 animationEfx = el.data('animate') || null;
-    //
-    //                             if (!animationEfx) {
-    //                                 animationEfx = defAnimationEfx;
-    //                             }
-    //
-    //                             setTimeout( function () {
-    //                                 el.addClass(animationEfx + ' animated');
-    //                                 el.removeClass('item-animate');
-    //                             }, ctr * 300);
-    //
-    //                         });
-    //                     }, 100);
-    //                 }
-    //
-    //                 // trigger once only
-    //                 this.destroy();
-    //             },
-    //             offset: '95%'
-    //         });
-    //
-    //         // $('.animate-this-bounceInRight').waypoint({
-    //         //     handler: function(direction) {
-    //         //
-    //         //         var defAnimationEfx = cfg.defAnimationBounceInRight;
-    //         //
-    //         //         if ( direction === 'down' && !$(this.element).hasClass('animated')) {
-    //         //             $(this.element).addClass('item-animate');
-    //         //
-    //         //             setTimeout(function() {
-    //         //                 $('body .animate-this-bounceInRight.item-animate').each(function(ctr) {
-    //         //                     var el       = $(this),
-    //         //                         animationEfx = el.data('animate') || null;
-    //         //
-    //         //                     if (!animationEfx) {
-    //         //                         animationEfx = defAnimationEfx;
-    //         //                     }
-    //         //
-    //         //                     setTimeout( function () {
-    //         //                         el.addClass(animationEfx + ' animated');
-    //         //                         el.removeClass('item-animate');
-    //         //                     }, ctr * 300);
-    //         //
-    //         //                 });
-    //         //             }, 100);
-    //         //         }
-    //         //
-    //         //         // trigger once only
-    //         //         this.destroy();
-    //         //     },
-    //         //     offset: '95%'
-    //         // });
-    //
-    //     //     $('.animate-this-bounceInLeft').waypoint({
-    //     //     handler: function(direction) {
-    //     //
-    //     //         var defAnimationEfx = cfg.defAnimationBounceInLeft;
-    //     //
-    //     //         if ( direction === 'down' && !$(this.element).hasClass('animated')) {
-    //     //             $(this.element).addClass('item-animate');
-    //     //
-    //     //             setTimeout(function() {
-    //     //                 $('body .animate-this-bounceInLeft.item-animate').each(function(ctr) {
-    //     //                     var el       = $(this),
-    //     //                         animationEfx = el.data('animate') || null;
-    //     //
-    //     //                     if (!animationEfx) {
-    //     //                         animationEfx = defAnimationEfx;
-    //     //                     }
-    //     //
-    //     //                     setTimeout( function () {
-    //     //                         el.addClass(animationEfx + ' animated');
-    //     //                         el.removeClass('item-animate');
-    //     //                     }, ctr * 300);
-    //     //
-    //     //                 });
-    //     //             }, 100);
-    //     //         }
-    //     //
-    //     //         // trigger once only
-    //     //         this.destroy();
-    //     //     },
-    //     //     offset: '95%'
-    //     // });
-    // }
-    //
-    // };
-    //
-    // var ssBounceAnimations = function() {
-    //
-    //     // if (!$("html").hasClass('no-cssanimations')) {
-    //     //     $('.animate-this-bounceInRight').waypoint({
-    //     //         handler: function (direction) {
-    //     //
-    //     //             var defAnimationEfx = cfg.defAnimationBounceInRight;
-    //     //
-    //     //             if (direction === 'down' && !$(this.element).hasClass('animated')) {
-    //     //                 $(this.element).addClass('item-animate');
-    //     //
-    //     //
-    //     //                 setTimeout(function () {
-    //     //                     $('body .animate-this-bounceInRight.item-animate').each(function (ctr) {
-    //     //                         var el = $(this),
-    //     //                             animationEfx = el.data('animate') || null;
-    //     //
-    //     //                         if (!animationEfx) {
-    //     //                             animationEfx = defAnimationEfx;
-    //     //                         }
-    //     //
-    //     //                         setTimeout(function () {
-    //     //                             el.addClass(animationEfx + ' animated');
-    //     //                             el.removeClass('item-animate');
-    //     //                         }, ctr * 30);
-    //     //
-    //     //                     });
-    //     //                 }, 100);
-    //     //             }
-    //     //
-    //     //             // trigger once only
-    //     //             this.destroy();
-    //     //         },
-    //     //         offset: '95%'
-    //     //     });
-    //     // }
-    //     $('.animate-this-bounceInLeft').waypoint({
-    //         handler: function(direction) {
-    //
-    //             var defAnimationEfx = cfg.defAnimationBounceInLeft;
-    //
-    //             if ( direction === 'down' && !$(this.element).hasClass('animated')) {
-    //                 $(this.element).addClass('item-animate');
-    //
-    //                 setTimeout(function() {
-    //                     $('body .animate-this-bounceInLeft.item-animate').each(function(ctr) {
-    //                         var el       = $(this),
-    //                             animationEfx = el.data('animate') || null;
-    //
-    //                         if (!animationEfx) {
-    //                             animationEfx = defAnimationEfx;
-    //                         }
-    //
-    //                         setTimeout( function () {
-    //                             el.addClass(animationEfx + ' animated');
-    //                             el.removeClass('item-animate');
-    //                         }, ctr * 300);
-    //
-    //                     });
-    //                 }, 100);
-    //             }
-    //
-    //             // trigger once only
-    //             this.destroy();
-    //         },
-    //         offset: '95%'
-    //     });
-    // };
   /* Intro Animation
 	* ------------------------------------------------------- */
 	var ssIntroAnimation = function() {
@@ -723,7 +587,7 @@
 		ssPlaceholder();
 		ssAlertBoxes();
 		ssAnimations();
-        ssBounceAnimations();
+        // ssBounceAnimations();
 		ssIntroAnimation();		
 		ssContactForm();
 		ssAjaxChimp();
