@@ -35,7 +35,21 @@
      ================================================== -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script>
+        // object.reload(forcedReload);
+        // window.location.reload(true);
 
+        window.addEventListener("beforeunload", function (event) {
+            alert("jejku")
+        });
+
+        // window.beforeunload(
+        //     alert(location.href)
+        // )
+
+
+
+    </script>
     <style>
         /*.box{*/
             /*margin-top:53px !important;*/
@@ -62,6 +76,8 @@
         /*}*/
     </style>
 
+
+
 </head>
 
 <body id="top">
@@ -82,18 +98,12 @@
         <h3>TechWeb</h3>
 
         <ul class="nav-list">
-            <li class="current"><a class="smoothscroll" href="#home" title="">Home</a></li>
-            <li><a class="smoothscroll" href="#about" title="">About</a></li>
-            <li><a class="smoothscroll" href="#services" title="">Services</a></li>
-            <li><a class="smoothscroll" href="#portfolio" title="">Works</a></li>
-            <li><a class="smoothscroll" href="#contact" title="">Contact</a></li>
+            <li class="current"><a class="smoothscroll" href="#home" title="">Start</a></li>
+            <li><a class="smoothscroll" href="#about" title="">o Nas</a></li>
+            <li><a class="smoothscroll" href="#services" title="">Oferta</a></li>
+            <li><a class="smoothscroll" href="#technologies" title="">Technologie</a></li>
+            <li><a class="smoothscroll" href="#contact" title="">Kontakt</a></li>
         </ul>
-
-        <p class="sponsor-text">
-            Looking for an awesome and reliable webhosting? Try <a href="http://www.dreamhost.com/r.cgi?287326|STYLESHOUT">DreamHost</a>.
-            Get <span>$50 off</span> when you sign up with the promocode <span>styleshout</span>.
-            <!-- Simply type	the promocode in the box labeled “Promo Code” when placing your order. -->
-        </p>
 
         <ul class="header-social-list">
             <li>
@@ -102,15 +112,7 @@
             <li>
                 <a href="#"><i class="fa fa-twitter"></i></a>
             </li>
-            <li>
-                <a href="#"><i class="fa fa-instagram"></i></a>
-            </li>
-            <li>
-                <a href="#"><i class="fa fa-behance"></i></a>
-            </li>
-            <li>
-                <a href="#"><i class="fa fa-dribbble"></i></a>
-            </li>
+
         </ul>
 
     </nav>  <!-- end #menu-nav-wrap -->
@@ -133,13 +135,13 @@
 
                     <h3 class="animate-this-fadeInRight">Tech<span class="orange">Web</span></h3>
                     <h1 class="animate-this-fadeInLeft">
-                        We Craft Stunning  <br>
-                        Digital Experiences.
+                        Projektujemy Strony <br> Internetowe  <br>
+                        skrojone na miarę.
                     </h1>
 
                     <div class="more animate-this-rollIn">
                         <a class="smoothscroll button stroke" href="#about">
-                            Learn More
+                            Dowiedz się Więcej
                         </a>
                     </div>
 
@@ -150,12 +152,12 @@
         </div> <!-- end home-content-tablecell -->
     </div> <!-- end home-content-table -->
 
-    <div class="scrolldown">
-        <a href="#about" class="scroll-icon smoothscroll">
-            Scroll Down
-            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-        </a>
-    </div>
+    {{--<div class="scrolldown">--}}
+        {{--<a href="#about" class="scroll-icon smoothscroll">--}}
+            {{--Scroll Down--}}
+            {{--<i class="fa fa-long-arrow-right" aria-hidden="true"></i>--}}
+        {{--</a>--}}
+    {{--</div>--}}
     <div>
         <ul class="home-social-list">
             <li class="animate-intro">
@@ -164,15 +166,7 @@
             <li class="animate-intro">
                 <a href="#"><i class="fa fa-twitter"></i></a>
             </li>
-            <li class="animate-intro">
-                <a href="#"><i class="fa fa-instagram"></i></a>
-            </li>
-            <li class="animate-intro">
-                <a href="#"><i class="fa fa-behance"></i></a>
-            </li>
-            <li class="animate-intro">
-                <a href="#"><i class="fa fa-dribbble"></i></a>
-            </li>
+
         </ul> <!-- end home-social-list -->
     </div>
 
@@ -199,7 +193,9 @@
                data-hc="#ff6600"></i>
             <div class="intro">
                 <h3 class="animate-this">About Us</h3>
-                <p class="lead animate-this"><span>Infinity</span> is a creative digital agency based in Manila, Philippines. We are composed of creative designers and experienced developers.</p>
+                <p class="lead animate-this"><span>TechWeb</span>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elementum lobortis pretium. Suspendisse nunc ipsum,
+                    dictum et maximus nec, iaculis sed massa.</p>
             </div>
 
         </div> <!-- end col-full  -->
@@ -208,12 +204,12 @@
 
 
 </section> <!-- end about -->
-<div class="scrolldown">
-    <a href="#services" class="scroll-icon smoothscroll">
-        Scroll Down
-        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-    </a>
-</div>
+{{--<div class="scrolldown">--}}
+    {{--<a href="#services" class="scroll-icon smoothscroll">--}}
+        {{--Scroll Down--}}
+        {{--<i class="fa fa-long-arrow-right" aria-hidden="true"></i>--}}
+    {{--</a>--}}
+{{--</div>--}}
 
 <!-- about
 ================================================== -->
@@ -267,16 +263,35 @@
             </div> <!-- end bgrid -->
         </div> <!-- end services-list -->
 
-    </div> <!-- end services-content -->
+        <div class="services-list block-1-2 block-tab-full group">
 
-    {{--<div class="scrolldown">--}}
-        {{--<a href="#portfolio" class="scroll-icon smoothscroll">--}}
-            {{--Scroll Down--}}
-            {{--<i class="fa fa-long-arrow-right" aria-hidden="true"></i>--}}
-        {{--</a>--}}
-    {{--</div>--}}
+            <div class="bgrid service-item animate-this-bounceInLeft">
 
-    <div class="row services-content">
+                <span class="icon"><i class="icon-lego-block"></i></span>
+
+                <div class="service-content">
+                    <h3 class="h05">Web Development</h3>
+
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+                    </p>
+                </div>
+
+            </div> <!-- end bgrid -->
+
+            <div class="bgrid service-item animate-this-bounceInRight">
+
+                <span class="icon"><i class="icon-megaphone"></i></span>
+
+                <div class="service-content">
+                    <h3 class="h05">Marketing</h3>
+
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+                    </p>
+                </div>
+
+            </div> <!-- end bgrid -->
+
+        </div> <!-- end services-list -->
 
         <div class="services-list block-1-2 block-tab-full group">
 
@@ -414,7 +429,8 @@
 ================================================== -->
 <section id="portfolio">
 
-    <div class="intro-wrap">
+    {{--<div class="overlay"></div>--}}
+    <div class="overlay intro-wrap">
 
         <div class="row narrow section-intro with-bottom-sep animate-this">
             <div class="col-twelve">
@@ -431,10 +447,12 @@
         <div class="col-twelve">
             <div id="folio-wrap" class="bricks-wrapper">
 
-                <div class="brick folio-item">
+                <ul class="row list-unstyled brick">
+
+                <li class="col-four">
                     <div class="item-wrap animate-this" data-src="images/portfolio/gallery/g-shutterbug.jpg" data-sub-html="#01" >
                         <a href="#" class="overlay">
-                            <img src="images/portfolio/shutterbug.jpg" alt="Skaterboy">
+                            <img src="images/portfolio/yellowwall.jpg" alt="Skaterboy">
                             <div class="item-text">
 	                     	<span class="folio-types">
 		     					      Web Development
@@ -451,9 +469,9 @@
                         <h4>Shutterbug</h4>
                         <p>Lorem ipsum Dolor deserunt labore sint officia. Magna et aute enim proident tempor sunt quis nulla voluptate fugiat velit. <a href="https://www.behance.net/">Details</a></p>
                     </div>
-                </div> <!-- end folio-item -->
+                </li> <!-- end folio-item -->
 
-                <div class="brick folio-item">
+                <li class="col-four">
                     <div class="item-wrap animate-this" data-src="images/portfolio/gallery/g-yellowwall.jpg" data-sub-html="#02">
                         <a href="#" class="overlay">
                             <img src="images/portfolio/yellowwall.jpg" alt="Shutterbug">
@@ -473,9 +491,9 @@
                         <h4>Yellow Wall</h4>
                         <p>Lorem ipsum Dolor deserunt labore sint officia. Magna et aute enim proident tempor sunt quis nulla voluptate fugiat velit. <a href="https://www.behance.net/">Details</a></p>
                     </div>
-                </div> <!-- end folio-item -->
+                </li> <!-- end folio-item -->
 
-                <div class="brick folio-item">
+                <li class="col-four">
                     <div class="item-wrap animate-this" data-src="images/portfolio/gallery/g-architecture.jpg" data-sub-html="#03" >
                         <a href="#" class="overlay">
                             <img src="images/portfolio/architecture.jpg" alt="Explore">
@@ -495,17 +513,17 @@
                         <h4>Architecture</h4>
                         <p>Lorem ipsum Dolor deserunt labore sint officia. Magna et aute enim proident tempor sunt quis nulla voluptate fugiat velit. <a href="https://www.behance.net/">Details</a></p>
                     </div>
-                </div> <!-- end folio-item -->
+                </li> <!-- end folio-item -->
 
-                <div class="brick folio-item">
-                    <div class="item-wrap animate-this"  data-src="images/portfolio/gallery/g-minimalismo.jpg"  data-sub-html="#04" >
+                <li class="col-four">
+                    <div class="item-wrap animate-this" data-src="images/portfolio/gallery/g-shutterbug.jpg" data-sub-html="#01" >
                         <a href="#" class="overlay">
-                            <img src="images/portfolio/minimalismo.jpg" alt="Minimalismo">
+                            <img src="images/portfolio/yellowwall.jpg" alt="Skaterboy">
                             <div class="item-text">
-		     					   <span class="folio-types">
-		     					      Web Design
-		     					   </span>
-                                <h3 class="folio-title">Minimalismo</h3>
+                        <span class="folio-types">
+                                  Web Development
+                               </span>
+                                <h3 class="folio-title">Shutterbug</h3>
                             </div>
                         </a>
                         <a href="https://www.behance.net/" class='details-link' title="details">
@@ -513,21 +531,21 @@
                         </a>
                     </div> <!-- end item-wrap -->
 
-                    <div id="04" class='hide'>
-                        <h4>Minimalismo</h4>
+                    <div id="01" class='hide'>
+                        <h4>Shutterbug</h4>
                         <p>Lorem ipsum Dolor deserunt labore sint officia. Magna et aute enim proident tempor sunt quis nulla voluptate fugiat velit. <a href="https://www.behance.net/">Details</a></p>
                     </div>
-                </div> <!-- end folio-item -->
+                </li> <!-- end folio-item -->
 
-                <div class="brick folio-item">
-                    <div class="item-wrap animate-this"  data-src="images/portfolio/gallery/g-skaterboy.jpg"  data-sub-html="#05" >
+                <li class="col-four">
+                    <div class="item-wrap animate-this" data-src="images/portfolio/gallery/g-yellowwall.jpg" data-sub-html="#02">
                         <a href="#" class="overlay">
-                            <img src="images/portfolio/skaterboy.jpg" alt="Bicycle">
+                            <img src="images/portfolio/yellowwall.jpg" alt="Shutterbug">
                             <div class="item-text">
-		     					   <span class="folio-types">
-		     					      Branding
-		     					   </span>
-                                <h3 class="folio-title">Skaterboy</h3>
+                        <span class="folio-types">
+                                  Marketing
+                               </span>
+                                <h3 class="folio-title">Yellow Wall</h3>
                             </div>
                         </a>
                         <a href="https://www.behance.net/" class='details-link' title="details">
@@ -535,21 +553,21 @@
                         </a>
                     </div> <!-- end item-wrap -->
 
-                    <div id="05" class='hide'>
-                        <h4>Skaterboy</h4>
+                    <div id="02" class='hide'>
+                        <h4>Yellow Wall</h4>
                         <p>Lorem ipsum Dolor deserunt labore sint officia. Magna et aute enim proident tempor sunt quis nulla voluptate fugiat velit. <a href="https://www.behance.net/">Details</a></p>
                     </div>
-                </div> <!-- end folio-item -->
+                </li> <!-- end folio-item -->
 
-                <div class="brick folio-item">
-                    <div class="item-wrap animate-this"  data-src="images/portfolio/gallery/g-salad.jpg"  data-sub-html="#06">
+                <li class="col-four">
+                    <div class="item-wrap animate-this" data-src="images/portfolio/gallery/g-architecture.jpg" data-sub-html="#03" >
                         <a href="#" class="overlay">
-                            <img src="images/portfolio/salad.jpg" alt="Salad">
+                            <img src="images/portfolio/architecture.jpg" alt="Explore">
                             <div class="item-text">
-		     					   <span class="folio-types">
-		     					      Branding
-		     					   </span>
-                                <h3 class="folio-title">Salad</h3>
+                               <span class="folio-types">
+                                  Web Design
+                               </span>
+                                <h3 class="folio-title">Architecture</h3>
                             </div>
                         </a>
                         <a href="https://www.behance.net/" class='details-link' title="details">
@@ -557,18 +575,109 @@
                         </a>
                     </div> <!-- end item-wrap -->
 
-                    <div id="06" class='hide'>
-                        <h4>Salad</h4>
-                        <p>Lorem ipsum Dolor deserunt labore sint officia. Magna et aute enim proident tempor sunt quis nulla voluptate fugiat velit. <a href="www.behance.net">Details</a></p>
+                    <div id="03" class='hide'>
+                        <h4>Architecture</h4>
+                        <p>Lorem ipsum Dolor deserunt labore sint officia. Magna et aute enim proident tempor sunt quis nulla voluptate fugiat velit. <a href="https://www.behance.net/">Details</a></p>
                     </div>
-                </div> <!-- end folio-item -->
+                </li> <!-- end folio-item -->
 
+                {{--<div class="brick folio-item">--}}
+                    {{--<div class="item-wrap animate-this"  data-src="images/portfolio/gallery/g-minimalismo.jpg"  data-sub-html="#04" >--}}
+                        {{--<a href="#" class="overlay">--}}
+                            {{--<img src="images/portfolio/minimalismo.jpg" alt="Minimalismo">--}}
+                            {{--<div class="item-text">--}}
+		     					   {{--<span class="folio-types">--}}
+		     					      {{--Web Design--}}
+		     					   {{--</span>--}}
+                                {{--<h3 class="folio-title">Minimalismo</h3>--}}
+                            {{--</div>--}}
+                        {{--</a>--}}
+                        {{--<a href="https://www.behance.net/" class='details-link' title="details">--}}
+                            {{--<i class="icon-link"></i>--}}
+                        {{--</a>--}}
+                    {{--</div> <!-- end item-wrap -->--}}
+
+                    {{--<div id="04" class='hide'>--}}
+                        {{--<h4>Minimalismo</h4>--}}
+                        {{--<p>Lorem ipsum Dolor deserunt labore sint officia. Magna et aute enim proident tempor sunt quis nulla voluptate fugiat velit. <a href="https://www.behance.net/">Details</a></p>--}}
+                    {{--</div>--}}
+                {{--</div> <!-- end folio-item -->--}}
+
+                {{--<div class="brick folio-item">--}}
+                    {{--<div class="item-wrap animate-this"  data-src="images/portfolio/gallery/g-skaterboy.jpg"  data-sub-html="#05" >--}}
+                        {{--<a href="#" class="overlay">--}}
+                            {{--<img src="images/portfolio/skaterboy.jpg" alt="Bicycle">--}}
+                            {{--<div class="item-text">--}}
+		     					   {{--<span class="folio-types">--}}
+		     					      {{--Branding--}}
+		     					   {{--</span>--}}
+                                {{--<h3 class="folio-title">Skaterboy</h3>--}}
+                            {{--</div>--}}
+                        {{--</a>--}}
+                        {{--<a href="https://www.behance.net/" class='details-link' title="details">--}}
+                            {{--<i class="icon-link"></i>--}}
+                        {{--</a>--}}
+                    {{--</div> <!-- end item-wrap -->--}}
+
+                    {{--<div id="05" class='hide'>--}}
+                        {{--<h4>Skaterboy</h4>--}}
+                        {{--<p>Lorem ipsum Dolor deserunt labore sint officia. Magna et aute enim proident tempor sunt quis nulla voluptate fugiat velit. <a href="https://www.behance.net/">Details</a></p>--}}
+                    {{--</div>--}}
+                {{--</div> <!-- end folio-item -->--}}
+
+                {{--<div class="brick folio-item">--}}
+                    {{--<div class="item-wrap animate-this"  data-src="images/portfolio/gallery/g-salad.jpg"  data-sub-html="#06">--}}
+                        {{--<a href="#" class="overlay">--}}
+                            {{--<img src="images/portfolio/salad.jpg" alt="Salad">--}}
+                            {{--<div class="item-text">--}}
+		     					   {{--<span class="folio-types">--}}
+		     					      {{--Branding--}}
+		     					   {{--</span>--}}
+                                {{--<h3 class="folio-title">Salad</h3>--}}
+                            {{--</div>--}}
+                        {{--</a>--}}
+                        {{--<a href="https://www.behance.net/" class='details-link' title="details">--}}
+                            {{--<i class="icon-link"></i>--}}
+                        {{--</a>--}}
+                    {{--</div> <!-- end item-wrap -->--}}
+
+                    {{--<div id="06" class='hide'>--}}
+                        {{--<h4>Salad</h4>--}}
+                        {{--<p>Lorem ipsum Dolor deserunt labore sint officia. Magna et aute enim proident tempor sunt quis nulla voluptate fugiat velit. <a href="www.behance.net">Details</a></p>--}}
+                    {{--</div>--}}
+                {{--</div> <!-- end folio-item -->--}}
+                </ul>
             </div> <!-- end folio-wrap -->
         </div> <!-- end twelve -->
     </div> <!-- end portfolio-content -->
 
 </section>  <!-- end portfolio -->
 
+<!-- stats
+================================================== -->
+<section id="clients">
+
+    <div class="row animate-this">
+        <div class="col-twelve">
+
+            <div class="client-lists owl-carousel">
+                <div><img src="images/clients/mozilla.png" alt=""></div>
+                <div><img src="images/clients/bower.png" alt=""></div>
+                <div><img src="images/clients/codepen.png" alt=""></div>
+                <div><img src="images/clients/envato.png" alt=""></div>
+                <div><img src="images/clients/firefox.png" alt=""></div>
+                <div><img src="images/clients/grunt.png" alt=""></div>
+                <div><img src="images/clients/evernote.png" alt=""></div>
+                <div><img src="images/clients/github.png" alt=""></div>
+                <div><img src="images/clients/joomla.png" alt=""></div>
+                <div><img src="images/clients/jQuery.png" alt=""></div>
+                <div><img src="images/clients/wordpress.png" alt=""></div>
+            </div>
+
+        </div> <!-- end col-twelve -->
+    </div> <!-- end row -->
+
+</section> <!-- end clients -->
 
 <!-- Testimonials Section
 ================================================== -->
@@ -625,34 +734,6 @@
     </div> <!-- end flex-container -->
 
 </section> <!-- end testimonials -->
-
-
-<!-- stats
-================================================== -->
-<section id="clients">
-
-    <div class="row animate-this">
-        <div class="col-twelve">
-
-            <div class="client-lists owl-carousel">
-                <div><img src="images/clients/mozilla.png" alt=""></div>
-                <div><img src="images/clients/bower.png" alt=""></div>
-                <div><img src="images/clients/codepen.png" alt=""></div>
-                <div><img src="images/clients/envato.png" alt=""></div>
-                <div><img src="images/clients/firefox.png" alt=""></div>
-                <div><img src="images/clients/grunt.png" alt=""></div>
-                <div><img src="images/clients/evernote.png" alt=""></div>
-                <div><img src="images/clients/github.png" alt=""></div>
-                <div><img src="images/clients/joomla.png" alt=""></div>
-                <div><img src="images/clients/jQuery.png" alt=""></div>
-                <div><img src="images/clients/wordpress.png" alt=""></div>
-            </div>
-
-        </div> <!-- end col-twelve -->
-    </div> <!-- end row -->
-
-</section> <!-- end clients -->
-
 
 <!-- contact
 ================================================== -->
@@ -847,12 +928,25 @@
 
 <!-- Java Script
 ================================================== -->
-<script type="text/javascript" src="{{ asset('assets/js/frontend/lib.js') }}"></script>
 <script src="js/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="{{ asset('assets/js/frontend/lib.js') }}"></script>
+
 <script src="js/plugins.js"></script>
 {{--<script type="text/javascript" src="{{ asset('assets/vendors/wow/js/wow.min.js') }}"></script>--}}
 <script src="js/main.js"></script>
 
+<script>
+
+    // $( window ).onunload(function() {
+    //     alert("Reloads");
+    // });
+
+
+    window.beforeunload = function () {
+        window.scrollTo(0, 0);
+    }
+
+</script>
 
 
 

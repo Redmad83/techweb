@@ -5,7 +5,20 @@
 
 (function($) {
 
+
+
+
+
+    // var redirectToURL = 'http://stackoverflow.com';
+    // window.location.href = redirectToURL;
+    // window.location.reload(true);
+
+
+    // window.location.href = '';
+
 	"use strict";
+
+    // window.location.href = location.pathname;
 
 	var cfg = {		
 		defAnimation   : "fadeInUp",    // default css animation
@@ -26,15 +39,26 @@
 	var doc = document.documentElement;
 	doc.setAttribute('data-useragent', navigator.userAgent);
 
+    // $(document).ready(function() {
+    //     var url = window.location.pathname;
+    //     console.log(url);
+    //     window.location.replace(url);
+    // });
 	
 	/* Preloader 
 	 * -------------------------------------------------- */
 	var ssPreloader = function() {
 
-		$WIN.on('load', function() {	
+		$WIN.on('load', function() {
+
+
+
+            // window.location.href = location.pathname;
+            // var url = window.location.pathname;
+            // window.location.replace(url);
 
 			// force page scroll position to top at page refresh
-			$('html, body').animate({ scrollTop: 0 }, 'normal');
+			// $('html, body').animate({ scrollTop: 0 }, 'normal');
 
 	      // will first fade out the loading animation 
 	    	$("#loader").fadeOut("slow", function(){
@@ -51,7 +75,7 @@
 	------------------------------------------------------ */ 
 	var ssFitVids = function() {
 		$(".fluid-video-wrapper").fitVids();
-	}; 
+	};
 
 
 	/*	Masonry
@@ -247,7 +271,7 @@
 
                     var defAnimationEfx = cfg.defAnimation;
 
-                    if (direction === 'down' && !$(this.element).hasClass('animated')) {
+                    if ((direction === 'down' || direction === 'up') && !$(this.element).hasClass('animated')) {
                         $(this.element).addClass('item-animate');
 
                         setTimeout(function () {
@@ -557,7 +581,7 @@
 		fadeInTime  = 400,         // how slow/fast you want the button to show
 		fadeOutTime = 400,         // how slow/fast you want the button to hide
 		scrollSpeed = 300,         // how slow/fast you want the button to scroll to top. can be a value, 'slow', 'normal' or 'fast'
-		goTopButton = $("#go-top")
+		goTopButton = $("#go-top");
 
 		// Show or hide the sticky footer button
 		$(window).on('scroll', function() {
@@ -567,8 +591,33 @@
 				goTopButton.fadeOut(fadeOutTime);
 			}
 		});
-	};	
+	};
+    /* Back to Top
+	* ------------------------------------------------------ */
+    var ssReload = function() {
 
+        // var reloaded = FetchEvent.isReload;
+
+        // window.onload(
+        // 	location.href = location.pathname,
+			// alert(location.href)
+			// );
+        // is equivalent to
+
+
+        //
+        // $(window).on("onload", function(e) {
+        //     alert("call");
+        // });
+
+        // self.addEventListener('fetch', function(event) {
+        //
+        //     if (event.isReload) {
+        //         alert("JEJ");
+        //     }
+
+        };
+        // );
 
   
   /* Initialize
@@ -587,7 +636,7 @@
 		ssPlaceholder();
 		ssAlertBoxes();
 		ssAnimations();
-        // ssBounceAnimations();
+        ssReload();
 		ssIntroAnimation();		
 		ssContactForm();
 		ssAjaxChimp();

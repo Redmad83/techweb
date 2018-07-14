@@ -13,9 +13,9 @@
 
 
 
-Route::get('/', function () {
-    return view('index');
-});
+//Route::get('/', function () {
+//    return view('index');
+//});
 
 //Auth::routes();
 
@@ -23,6 +23,24 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/infinity', 'InfinityController@index')->name('infinity');
 
+Route::redirect('/infinity#about', '/infinity', 301);
+Route::redirect('/infinity#services', '/infinity', 301);
+
+Route::get('/', function () {
+    return view('infinity');
+});
+
+
+Route::any('/{query}',
+    function() { return redirect('/'); })
+    ->where('query', '.*');
+
+//
+//Route::get('/{name}', function () {
+//    return view('infinity');
+//})->where('name', '/^#.+/');
+//
+//Route::get('user/{id}', 'UserController@profile')->where('id', '[0-9]+');
 
 //
 //Route::get('/home', function () {

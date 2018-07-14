@@ -33,6 +33,7 @@
 @import url("font-awesome/css/font-awesome.min.css");
 @import url("micons/micons.css");
 @import url("fonts.css");
+@import url('https://fonts.googleapis.com/css?family=Courgette|EB+Garamond:400,400i,600&subset=latin-ext');
 
 
 /* ===================================================================
@@ -717,9 +718,10 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"] {
   display: inline-block;
-  font-family: "montserrat-bold", sans-serif;
-  font-size: 1.4rem;
-  text-transform: uppercase;
+  font-family: 'Courgette', cursive;
+  font-weight: bold;
+  font-size: 1.6rem;
+  /*text-transform: uppercase;*/
   letter-spacing: .3rem;
   height: 5.4rem;
   line-height: 5.4rem;
@@ -797,7 +799,7 @@ button.large, .button.large {
 }
 
 button.stroke, .button.stroke {
-  background: transparent !important;
+  background: #ffcc00 !important;
   border: 2px solid #313131;
   line-height: 4.8rem;
 }
@@ -811,10 +813,11 @@ button.stroke.large, .button.stroke.large {
 }
 
 button.stroke:hover, .button.stroke:hover {
-  border: 3px solid #ff6600 !important;
-  color: #f9a828;
-    line-height: 5rem !important;
-    font-size: 2rem;
+    background: #ff6600 !important;
+  border: 3px solid #ffcc00 !important;
+  color: #ffcc00 !important;
+    line-height: 4.8rem !important;
+    font-size: 1.9rem;
 }
 
 button::-moz-focus-inner,
@@ -1518,9 +1521,9 @@ header .header-logo a {
   width: 100%;
   height: 100%;
   background-color: #151515;
-  background-image: url(../images/services-bg.jpg);
+  background-image: url(../images/bg-home.jpg);
   background-repeat: no-repeat;
-  background-position: center 30%;
+  background-position: center 60%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -1534,7 +1537,7 @@ header .header-logo a {
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: .2;
+  opacity: .7;
   background-color: #19191b;
 }
 
@@ -1567,16 +1570,17 @@ header .header-logo a {
 
 .orange { color: #ff6600 ;}
 .home-content-tablecell h1 {
-  font-family: "montserrat-bold", serif;
-  font-size: 9rem;
+  font-family: 'Courgette', cursive;
+  font-size: 7rem;
   line-height: 1.133;
   color: #ff6600;
 }
 .home-content-tablecell .more {
   margin: 4.8rem 0 0 0;
+
 }
 .home-content-tablecell .more .button {
-  border-color: #ffcc00;
+  border-color: #ff6600;
   color: #ff6600;
 }
 
@@ -1792,7 +1796,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
 #about {
   position: relative;
   padding: 4.2rem 0 12rem;
-  background-color: wheat;
+  background-color: white;
   min-height: 696px;
   text-align: center;
 }
@@ -1946,7 +1950,7 @@ visibility: hidden;
   background-color: #19191b;
   background-image: url(../images/services-bg.jpg);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center 30%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -2189,26 +2193,49 @@ visibility: hidden;
  *
  * ------------------------------------------------------------------- */
 #portfolio {
-  background: #FFFFFF;
-  min-height: 800px;
-  position: relative;
-  padding: 0;
+    background-color: wheat;
+    background-image: url(../images/bg-gallery.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    min-height: 800px;
+    position: relative;
+    /*padding: 0;*/
+    padding: 5rem 0 5rem;
+    color: rgba(255, 255, 255, 0.3);
 }
+
+/*#portfolio .overlay {*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*background-color: rgba(5, 5, 5, 0.7);*/
+/*}*/
+
 #portfolio .intro-wrap {
-  padding: 15rem 0 21rem;
-  background: #111111;
+  padding: 10rem 0 21rem;
+  /*background: #111111;*/
 }
 #portfolio .section-intro h3 {
-  color: rgba(242, 242, 242, 0.5);
+  /*color: rgba(242, 242, 242, 0.5);*/
+    color:black;
 }
 #portfolio .section-intro h1 {
-  color: #FFFFFF;
+  /*color: #FFFFFF;*/
+    color:black;
 }
 #portfolio .section-intro .lead {
-  color: rgba(242, 242, 242, 0.4);
+  /*color: rgba(242, 242, 242, 0.4);*/
+    color:black;
 }
 #portfolio .portfolio-content {
-  margin-top: -22.2rem;
+  margin-top: -20rem;
+    margin-bottom: 10rem;
+    position: relative;
 }
 #portfolio .bricks-wrapper:before,
 #portfolio .bricks-wrapper:after {
@@ -2220,14 +2247,24 @@ visibility: hidden;
 }
 #portfolio .bricks-wrapper .brick {
   float: left;
-  width: 50%;
+  width: 100%;
   padding: 0;
   margin: 0;
+
 }
 #portfolio .bricks-wrapper .brick:nth-child(2n+1) {
   clear: both;
 }
 
+#portfolio .list-unstyled{
+  padding-left: 0;
+  list-style: none;
+  z-index: 1001;
+}
+
+#portfolio .list-unstyled .col-four{
+    padding: 5px 5px !important;
+}
 /* -------------------------------------------------------------------
  * masonry entries - (_layout.css)
  * ------------------------------------------------------------------- */
