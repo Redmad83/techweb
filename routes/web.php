@@ -23,17 +23,12 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/infinity', 'InfinityController@index')->name('infinity');
 
-Route::redirect('/infinity#about', '/infinity', 301);
-Route::redirect('/infinity#services', '/infinity', 301);
 
 Route::get('/', function () {
     return view('infinity');
 });
 
 
-Route::any('/{query}',
-    function() { return redirect('/'); })
-    ->where('query', '.*');
 
 //
 //Route::get('/{name}', function () {

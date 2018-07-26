@@ -52,7 +52,8 @@
                 <div class="row">
                     <div class="col-twelve">
 
-                        <h3 class="animate-intro">Jesteśmy TechWeb.</h3>
+                        <h3 class="animate-intro"></h3>
+
                         <h1 class="animate-intro">
                             Dzięki nam stworzysz  <br>
                             swoje techniczne cudo.

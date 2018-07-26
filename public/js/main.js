@@ -21,7 +21,7 @@
     // window.location.href = location.pathname;
 
 	var cfg = {		
-		defAnimation   : "fadeInUp",    // default css animation
+		defAnimation    : ["fadeInUp"],    // default css animation
 		defAnimationFadeInRight   : "fadeInRight",    // default css animation
 		defAnimationFadeInLeft   : "fadeInLeft",    // default css animation
 		defAnimationRollIn   : "rollIn",    // default css animation
@@ -97,7 +97,17 @@
 	------------------------------------------------------- */
 	var ssLightGallery = function() {
 
-		$('#folio-wrap').lightGallery({  
+		$('#folio-wrap').lightGallery({
+            width: '700px',
+            height: '470px',
+            mode: 'lg-fade',
+            addClass: 'fixed-size',
+            counter: false,
+            download: false,
+            startClass: '',
+            enableSwipe: false,
+            enableDrag: false,
+            speed: 500,
 			showThumbByDefault: false,
 			hash: false,
 			selector: ".item-wrap"		

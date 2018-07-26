@@ -1141,7 +1141,7 @@ input::-moz-focus-inner {
 }
 .section-intro h3 {
   font-family: "montserrat-bold", sans-serif;
-  font-size: 1.8 rem;
+  font-size: 1.8rem;
   line-height: 1.667;
   color: rgba(242, 242, 242, 0.5);
   text-transform: uppercase;
@@ -1150,7 +1150,7 @@ input::-moz-focus-inner {
 }
 .section-intro .lead {
   font-family: "montserrat-regular", sans-serif;
-  font-size: 1.8;
+  font-size: 1.8rem;
   line-height: 1.833;
 }
 .section-intro.with-bottom-sep {
@@ -1159,9 +1159,9 @@ input::-moz-focus-inner {
 }
 .section-intro.with-bottom-sep::after {
   display: inline-block;
-  height: 1px;
+  height: 2px;
   width: 200px;
-  background-color: rgba(242, 242, 242, 0.1);
+  background-color: rgba(255, 102, 0, 0.7);
   text-align: center;
 }
 
@@ -1924,8 +1924,13 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   color: #FFFFFF;
 }
 #services .section-intro .lead {
-  color: rgba(242, 242, 242, 0.4);
+    font-family: "Poppins", serif;
+    font-size: 1.8rem;
+    line-height: 1.833;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 100;
 }
+
 #services .services-content {
   text-align: center;
   max-width: 1040px;
@@ -1939,7 +1944,10 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   padding: 0 50px;
 }
 #services .services-list .service-item p {
-  color: rgba(242, 242, 242, 0.5);
+    color: rgba(242, 242, 242, 0.8);
+    font-family: "Poppins", serif;
+    font-weight: 100;
+    font-size: 1.6rem;
 }
 #services .services-list .icon {
   display: inline-block;
